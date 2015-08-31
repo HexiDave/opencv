@@ -1191,6 +1191,11 @@ proportional to sigmaSpace.
 CV_EXPORTS_W void bilateralFilter( InputArray src, OutputArray dst, int d,
                                    double sigmaColor, double sigmaSpace,
                                    int borderType = BORDER_DEFAULT );
+								   
+//! smooths the image using adaptive bilateral filter
+CV_EXPORTS_W void adaptiveBilateralFilter( InputArray src, OutputArray dst, Size ksize,
+                                           double sigmaSpace, double maxSigmaColor = 20.0, Point anchor=Point(-1, -1),
+                                           int borderType=BORDER_DEFAULT );
 
 /** @brief Blurs an image using the box filter.
 
